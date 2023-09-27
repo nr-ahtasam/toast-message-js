@@ -61,3 +61,41 @@ body {
   text-align: center;
   font-size: 20px;
 }
+.toast-message {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  background-color: green;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.toast-animation-in {
+  animation: toast-animation-in 0.6s ease-in;
+}
+.toast-animation-out {
+  animation: toast-animation-out 0.5s ease-in;
+}
+
+@keyframes toast-animation-in {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes toast-animation-out {
+  from {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+}
